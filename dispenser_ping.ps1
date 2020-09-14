@@ -18,14 +18,12 @@ $port.Close()
 
 # Output whether the user is a good person or not
 If ($answer -eq "Unwashed") {
-    # If user cares not for their peers
-  $output = 'HEATHEN'
-
-}Else {
-  # If user has washed hands
-  $output = 'Good job'
+  # If user cares not for their peers
+  $output = 'Please sanitize hands before using the computer.'
+  # Creating object os WScript
+  $wshell = New-Object -ComObject Wscript.Shell -ErrorAction Stop
+  # Invoking the POP method using object
+  $wshell.Popup($output,$default,$default,1)
+  # Force logout
+  shutdown.exe -l
 }
-#creating object os WScript
-$wshell = New-Object -ComObject Wscript.Shell -ErrorAction Stop
-#invoking the POP method using object
-$wshell.Popup($output,$defaule,$default,1)
