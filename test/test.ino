@@ -2,13 +2,15 @@
 
 #define WASHED true // Characters to be used for the wash_flag
 #define UNWASHED false
-#define GREEN A1 // LED pins
-#define RED A0
+#define RED A5 // LED pins
+#define GREEN A4
+#define IR_LED 2
+#define MOTOR 9 // motor pin D10
 #define WASHTIMEOUT 30*1000 // 30 seconds to log on
-#define SPEAKER 2
 
 bool wash_flag; // Flag for deciding what to send
 unsigned long wash_timer; // Timer for end of washed state
+int sensor_value;
 
 void set_to_washed() {
   wash_flag = WASHED; // Indicate that button is pressed
@@ -25,9 +27,11 @@ void set_to_unwashed() {
 
 void setup() { // Function run at start of program.
   ButtonInitialize(); // Calls function that sets up pin and machine.
-  pinMode(GREEN, OUTPUT); // Set green led pin to output
-  pinMode(RED, OUTPUT); //Set red led pin to output
-  pinMode(SPEAKER, OUTPUT);
+  pinMode(GREEN, OUTPUT);
+  pinMode(RED, OUTPUT);
+  pinMode(IR_LED, OUTPUT);
+  analogWrite(IR_LED, 255);
+  pinMode(MOTOR, OUTPUT);
   Serial.begin(9600); // Set baud rate to 9600
   set_to_unwashed();
 } //End setup.
@@ -52,12 +56,11 @@ void loop() {
   }
   switch ( ButtonNextState( ) ) {
     case 1:
-      digitalWrite(13, HIGH); // Indicate button has been pressed with LED.
       set_to_washed();
-      tone(SPEAKER, 1000, 200);
+      analogWrite(MOTOR, 255);
       break;
     case 2:
-      digitalWrite(13, LOW); // Indicate button released.
+      analogWrite(MOTOR, 0);
       break;
   } //End switch.
 }//End loop
