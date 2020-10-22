@@ -8,9 +8,10 @@
 #define PHOTODIODE_SENSOR A3
 #define PHOTODIODE_POWER 2 //D2
 #define IR_LED 6 // D6
-// Threshold for definging hand detection.
-#define THRESHOLD_CHANGE 10
-#define NUM_READINGS 10
+// Threshold for defining hand detection.
+#define THRESHOLD_CHANGE 30
+#define NUM_READINGS 2
+#define SENSOR_DELAY 100
 // Amount of time to dispense.
-#define DISPENCE_TIME 3000 // 1 second
-#define DISPENCE_DELAY 5000 // 2 seconds
+#define DISPENCE_TIME 1000 // 1 second
+#define DISPENCE_DELAY 4000 // 4 seconds

@@ -33,6 +33,9 @@ void initialize_sensor() {
 }
 
 bool read_sensor() {
+  if (millis() - SensorTime < SENSOR_DELAY){
+    return false;
+  }
   //Add sensor reading into the array
   previous_readings[index] = new_readings[index];
   new_readings[index] = analogRead(PHOTODIODE_SENSOR);
@@ -57,6 +60,9 @@ bool read_sensor() {
   // Calculate the average of the readings
   previous_ave /= NUM_READINGS;
   new_ave /= NUM_READINGS;
+
+  // Update SensorTime for delay
+  SensorTime = millis();
   
   if (previous_ave - new_ave > THRESHOLD_CHANGE) {
     return true;
