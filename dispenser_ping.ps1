@@ -1,23 +1,15 @@
-# For optional arguments (TODO make this constant)
-$default = [Type]::Missing
-
 # Create object for arduino serial port
-$port= new-Object System.IO.Ports.SerialPort COM3,9600,None,8,one
+$port= new-Object System.IO.Ports.SerialPort COM5,9600,None,8,one
+$port.ReadTimeout = 5000
 
-# This block gets rid of the initial serial port error
-$port.Open()
-Start-Sleep -m 1000
-$port.Close()
-Start-Sleep -m 1000
-
-$port.ReadTimeout = 10000
+Start-Sleep 2
 # Open serial port
 $port.Open()
 # Ping arduino to get a response
 $port.WriteLine("Check")
 # Get either washed or unwashed
 $answer = $port.ReadLine()
-# Remove annoying ending space
+# Remove annoying new line
 $answer = $answer.Substring(0,$answer.Length-1)
 # Close serial port
 $port.Close()
