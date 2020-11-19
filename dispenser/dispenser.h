@@ -13,5 +13,5 @@
 #define NUM_READINGS 2
 #define SENSOR_DELAY 100
 // Amount of time to dispense.
-#define DISPENCE_TIME 1000 // 1 second
-#define DISPENCE_DELAY 4000 // 4 seconds
+#define DISPENCE_TIME 875 // .875 second
+#define DISPENCE_DELAY 3000 // 3 seconds
