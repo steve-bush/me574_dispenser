@@ -35,7 +35,7 @@ Use whatever printing software you prefer for slicing the STL files. We used Cur
 
 ## Software
 
-There are a couple ways that the hand sanitizer dispenser can be setup. There are 2 different scripts than can be chosen from to enable the device to block login. The first script is dispenser_ping_secure.ps1 which is the recommended script to use. It will block login whether the dispenser is plugged in or not. The other script named, dispenser_ping.ps1, will stop working when the device is unpluggled which may be desired for people without much computer knowledge.
+There are 2 different scripts than can be chosen from to enable the device to block login. The first script is `dispenser_ping_secure.ps1` which is the recommended script to use. It will block login whether the dispenser is plugged in or not. The other script named, `dispenser_ping.ps1`, will stop working when the device is unpluggled which may be desired for people without much computer knowledge.
 
 When setting up the script to be run on login, the company's administrative software should be used and set up to run for non-admin or non-IT users. I give steps below to setting it up with Windows Group Policy and also with Task Scheduler. These would be available to anyone and the steps should be similar for whatever other administrative software used.
 
