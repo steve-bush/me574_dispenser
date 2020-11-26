@@ -1,6 +1,37 @@
 # Plague Destroyer 3000
 
-Below are the steps for setting up group 6's hand sanitizer dispenser for either home use or company use. The files for
+Below are the steps for setting up group 6's hand sanitizer dispenser for either home use or company use. The files for setting up the logoff scripts are located in the `logoff_scripts` directory. The part files for 3D printing are located in the `printing` directory. Lastly, the Arduino code is located in the `dispenser` directory.
+
+## Printing
+
+Use whatever printing software you prefer for slicing the STL files. We used Cura for our own set up to get usable G code. We used PLA+ at 225 C ejection temperature, 75 C bed temperature, 55% infill, a wall count of 3, and a 45 mm/s print speed.
+
+## Assembly
+
+1. Watch instruction [video](https://youtu.be/RnLYFoYw21w) for more information on the following steps.
+2. Assemble PCB board according to schematic provided.
+3. Drill 3/8in hole into top corner of sanitizer bottle.
+4. Assemble Base Lid to Top using provided dowel pins.
+5. Route USB cable through base inserting mini USB through bottom of base leaving 3 in of cable through top of base. Make sure USB cable is secured into notch on bottom of base.
+6. Attach Pump to Pump Holder, making sure the suction port of the pump is at the base of the Pump Mount.
+7. Install tubing into pump outlet, use twisting motion for proper installation.
+8. Insert Pump and Pump mount into sanitizer bottle. Making sure that pump mount is sitting flush with the sanitizer bottle and pump outlet is facing towards hole in bottle.
+9. Route wiring from pump and tubing through grommet hole in sanitizer bottle from the inside of the bottle to the outside.
+10. Slide grommet over electrical cable beyond heat shrink tubing, then squeeze and insert tubing through grommet.
+11. Insert grommet securely into hole of bottle.
+12. Install grommet into sanitizer bottle.
+13. Install sanitizer bottle into base with tubing towards right side of base when viewing from bottle side.
+14. Insert LED holder into Top.
+15. Mount assembled Base Lid and Top to the base using 2 of the provided screws, making sure USB cable and tubing is routed through slot in base and to not overtighten screws.
+16. Flip assembly onto top.
+17. Route tubing to far side of Top ensuring enough tube is allowed to reach nozzle.
+18. Plug USB cord into Arduino Nano on PCB Board.
+19. Insert PCB board into Top above tubing and secure with 2 of the provided screws making sure that the red/green Led is secured into LED holder and tubing and wiring is not pinched.
+20. Install top cover making sure tubing is aligned with nozzle.
+21. Plug in motor to motor wire from PCB board with correct polarity.
+22. Install sanitizer bottle lid onto bottle.
+23. Install mid cover onto front of sanitizer.
+24. Plug in USB to 5V 1A power source or Computer USB port.
 
 ## Software
 
@@ -31,34 +62,3 @@ To setup with Task Scheduler:
 6. Close and save the new task.
 
 Lastly, the Arduino [code](https://github.com/steve-bush/me574_dispenser/tree/master/dispenser) will need to be uploaded to either an Arduino Nano or Mega.
-
-## Printing
-
-Use whatever printing software you prefer for slicing the STL files. We used Cura for our own set up to get usable G code. We used PLA+ at 225 C ejection temperature, 75 C bed temperature, 55% infill, a wall count of 3, and 45mm/s of print speed.
-
-## Assembly
-
-1. Watch instruction [video](https://youtu.be/RnLYFoYw21w) for more information on the following steps.  
-2. Assemble PCB board according to schematic provided.
-3. Drill 3/8in hole into top corner of sanitizer bottle.
-4. Assemble Base Lid to Top using provided dowel pins.
-5. Route USB cable through base inserting mini USB through bottom of base leaving 3 in of cable through top of base. Make sure USB cable is secured into notch on bottom of base.
-6. Attach Pump to Pump Holder, making sure the suction port of the pump is at the base of the Pump Mount.
-7. Install tubing into pump outlet, use twisting motion for proper installation.
-8. Insert Pump and Pump mount into sanitizer bottle. Making sure that pump mount is sitting flush with the sanitizer bottle and pump outlet is facing towards hole in bottle.
-9. Route wiring from pump and tubing through grommet hole in sanitizer bottle from the inside of the bottle to the outside.
-10. Slide grommet over electrical cable beyond heat shrink tubing, then squeeze and insert tubing through grommet.
-11. Insert grommet securely into hole of bottle.
-12. Install grommet into sanitizer bottle.
-13. Install sanitizer bottle into base with tubing towards right side of base when viewing from bottle side.
-14. Insert LED holder into Top.
-15. Mount assembled Base Lid and Top to the base using 2 of the provided screws, making sure USB cable and tubing is routed through slot in base and to not overtighten screws.
-16. Flip assembly onto top.
-17. Route tubing to far side of Top ensuring enough tube is allowed to reach nozzle.
-18. Plug USB cord into Arduino Nano on PCB Board.
-19. Insert PCB board into Top above tubing and secure with 2 of the provided screws making sure that the red/green Led is secured into LED holder and tubing and wiring is not pinched.
-20. Install top cover making sure tubing is aligned with nozzle.
-21. Plug in motor to motor wire from PCB board with correct polarity.
-22. Install sanitizer bottle lid onto bottle.
-23. Install mid cover onto front of sanitizer.
-24. Plug in USB to 5V 1A power source or Computer USB port.
