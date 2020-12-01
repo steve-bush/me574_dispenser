@@ -9,7 +9,7 @@ Use whatever printing software you prefer for slicing the STL files. We used Cur
 ## Assembly
 
 1. Watch instruction [video](https://youtu.be/RnLYFoYw21w) for more information on the following steps.
-2. Assemble PCB board according to schematic provided.
+2. Assemble PCB board according to the [schematic](https://github.com/steve-bush/me574_dispenser/tree/master/pcb) and [BOM](https://github.com/steve-bush/me574_dispenser/tree/master/pcb) provided.
 3. Drill 3/8in hole into top corner of sanitizer bottle.
 4. Assemble Base Lid to Top using provided dowel pins.
 5. Route USB cable through base inserting mini USB through bottom of base leaving 3 in of cable through top of base. Make sure USB cable is secured into notch on bottom of base.
